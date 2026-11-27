@@ -1,0 +1,45 @@
+/* SPDX-License-Identifier: MIT */
+/* Turkey Run: page chrome around the game canvas. The game itself is canvas-drawn. */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #241a10;
+  color: #ffe9b0;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#stage {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+#game-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #7ec8f7;
+  cursor: pointer;
+  touch-action: manipulation;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+#caption {
+  margin: 10px 4px 0;
+  font-size: 14px;
+  text-align: center;
+  color: #d8c49a;
+}
+
+#debug-state,
+#selftest {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

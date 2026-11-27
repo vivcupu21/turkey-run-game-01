@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: MIT -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turkey Run — Escape Thanksgiving Dinner</title>
+<meta name="description" content="Turkey Run: an original turkey escape game. Outrun the farmer, dodge the oven and the carving knife, and reach the woods before Thanksgiving dinner.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="stage">
+  <canvas id="game-canvas" width="1280" height="720" aria-label="Turkey Run game"></canvas>
+  <p id="caption">Turkey Run — outrun the farmer, dodge the oven and the carving knife, reach the woods.</p>
+  <div id="debug-state" aria-hidden="true"></div>
+  <div id="selftest" aria-hidden="true"></div>
+</main>
+<script src="src/config.js"></script>
+<script src="src/random.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/world.js"></script>
+<script src="src/render.js"></script>
+<script src="src/input.js"></script>
+<script src="src/shots.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
