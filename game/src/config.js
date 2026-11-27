@@ -1,0 +1,111 @@
+// SPDX-License-Identifier: MIT
+// Turkey Run: configuration — canvas, physics, stages, obstacles, scoring.
+// One job: every tunable number for the game lives here.
+'use strict';
+
+const TURKEY_CONFIG = {
+  canvasWidth: 1280,
+  canvasHeight: 720,
+  groundY: 600,
+  turkeyX: 260,
+  turkeyWidth: 86,
+  turkeyStandHeight: 96,
+  turkeySlideHeight: 48,
+  gravity: 2600,
+  jumpVelocity: -1020,
+  doubleJumpVelocity: -820,
+  baseSpeed: 380,
+  maxSpeed: 760,
+  speedPerMetre: 0.16,
+  pixelsPerMetre: 50,
+  escapeDistance: 2000,
+  startLives: 3,
+  invincibleSeconds: 1.4,
+  cornScore: 10,
+  goldenCornScore: 50,
+  metreScore: 1,
+};
+
+const TURKEY_STAGES = [
+  {
+    name: 'Farmyard',
+    fromMetre: 0,
+    skyTop: '#7ec8f7',
+    skyBottom: '#ffe9b0',
+    sunColor: '#ffd94d',
+    hillFar: '#8fce7a',
+    hillNear: '#5da24e',
+    ground: '#a9803e',
+    groundTop: '#c99a4b',
+    accent: '#b8452c',
+  },
+  {
+    name: 'Cornfield',
+    fromMetre: 500,
+    skyTop: '#f7b733',
+    skyBottom: '#fde9a8',
+    sunColor: '#ff9d2e',
+    hillFar: '#e0a83c',
+    hillNear: '#b07f2a',
+    ground: '#8a6a2f',
+    groundTop: '#b08a3e',
+    accent: '#7a4a12',
+  },
+  {
+    name: 'Farm Lane',
+    fromMetre: 1000,
+    skyTop: '#5b4a8a',
+    skyBottom: '#ff9d76',
+    sunColor: '#ff7a59',
+    hillFar: '#6b558f',
+    hillNear: '#4c3a6e',
+    ground: '#5d4a33',
+    groundTop: '#7d6547',
+    accent: '#2e2140',
+  },
+  {
+    name: 'The Kitchen',
+    fromMetre: 1500,
+    skyTop: '#8a5a3b',
+    skyBottom: '#e8b48a',
+    sunColor: '#ffe6b0',
+    hillFar: '#6e4630',
+    hillNear: '#54331f',
+    ground: '#7a5238',
+    groundTop: '#9a6f4a',
+    accent: '#3d2416',
+  },
+  {
+    name: 'The Woods',
+    fromMetre: 2000,
+    skyTop: '#3f7d4a',
+    skyBottom: '#cfe8a8',
+    sunColor: '#fff3a0',
+    hillFar: '#2f6b3a',
+    hillNear: '#245c2e',
+    ground: '#4a5a2f',
+    groundTop: '#6b7d3f',
+    accent: '#1d3a24',
+  },
+];
+
+const TURKEY_OBSTACLES = {
+  hay: { width: 74, height: 62, label: 'Hay bale' },
+  fence: { width: 46, height: 84, label: 'Fence' },
+  oven: { width: 128, height: 100, label: 'Oven' },
+  knife: { width: 40, height: 150, label: 'Carving knife' },
+};
+
+const TURKEY_TEXT = {
+  title: 'TURKEY RUN',
+  subtitle: 'Escape Thanksgiving Dinner',
+  tagline: 'The farmer is coming. The oven is hot. The knife is sharp. RUN.',
+  startPrompt: 'PRESS SPACE OR CLICK TO RUN',
+  controls: 'SPACE / CLICK — jump (twice for a double jump)    •    DOWN / S — slide under the knife',
+  caughtTitle: 'CAUGHT!',
+  caughtLine: 'The farmer got you... Thanksgiving dinner is served.',
+  escapedTitle: 'ESCAPED!',
+  escapedLine: 'You made it to the woods. No dinner today — gobble gobble!',
+  restartPrompt: 'PRESS R OR CLICK TO RUN AGAIN',
+  spotted: 'SPOTTED!',
+};
